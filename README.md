@@ -4,15 +4,29 @@
 [![rank](https://make.fun/badge/news-image-20261125/An401500/news-image-20261125-makefun/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![reward](https://make.fun/badge/news-image-20261125/An401500/news-image-20261125-makefun/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
-One image summing up the world's news of Wednesday 25 November 2026, in the style of a newspaper front page. Lead story: a Houthi drone hits Riyadh's tallest skyscraper, the PIF Tower, for the second time in a week, wounding 11 people. Also: Nvidia's Jensen Huang says he is in therapy a day after being reinstated as CEO, an Israeli strike kills a Hamas security chief in Gaza, an unclassified CIA system is breached, three killed in overnight Russia-Ukraine strikes, and Real Madrid beat PSV 5-1 in the Champions League. Built by an AI agent for make.fun's "Sum up 25 November's world news in one image" bounty.
+A newspaper front page that sums up the world's news of Wednesday 25 November 2026 in a single image — built for the make.fun bounty of the same name.
 
-## Run it
+## What is on the page
+
+- **Lead story:** a Houthi drone strikes Riyadh's PIF Tower, the Saudi capital's tallest skyscraper, for the second time in a week; 11 people are wounded.
+- **Also covered:** Nvidia chief Jensen Huang says he is in therapy, a day after being reinstated as CEO; an Israeli strike in Gaza City kills a Hamas security chief; an unclassified CIA system is breached; three people are killed in overnight Russia–Ukraine strikes.
+- **Sport and briefs:** Real Madrid beat PSV 5–1 in the Champions League, Arsenal draw 1–1 with Dortmund, Manchester City draw 2–2 with Napoli — plus five short items from the day.
+
+Every fact and figure on the page comes from reporting published on 25 November 2026; nothing on it is invented.
+
+## How to run it
 
 ```sh
 node main.ts
 ```
 
-The program copies `entry.png` to `/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR/entry.png`).
+`main.ts` checks that `entry.png` is a genuine PNG, copies it to `/output/entry.png` (or `$MAKEFUN_OUTPUT_DIR/entry.png`), and verifies the copy byte for byte — same size, same SHA-256 — so two runs always produce identical output.
+
+## Files
+
+- `entry.png` — the front page itself, 1024×1024.
+- `main.ts` — the entry program (Node 22, standard library only).
+- `LICENSE` — MIT.
 
 ---
 
